@@ -1,0 +1,6 @@
+sim
+gls
+*.vcd
+*.log
+pnr/runs/
+RTL_to_GDS.pdf
