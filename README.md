@@ -9,7 +9,7 @@ Example used in Part A: A = 6 + 5 = **11** (last digit of 2023102006, Nilavra Gh
 
 **Environment:** IIC-OSIC-TOOLS Docker image `hpretl/iic-osic-tools:latest` (release 2026.10) with Yosys 0.70, OpenSTA 3.1.0, LibreLane v3.1.0.dev3, Icarus Verilog 14.0 and KLayout. The original testbench was also run with Icarus Verilog 11.0 on the Ubuntu host, with identical results; the revised testbench (latency and reset checks) was run only in the container with Icarus Verilog 14.0. Technology: SKY130A, `sky130_fd_sc_hd`, typical corner `tt_025C_1v80` for Parts B and C.
 
-All commands are run from the repository root unless a step says otherwise. Inside the container the repository is at `/foss/designs/DVD-2023102006-2023112019`.
+All commands are run from the repository root unless a step says otherwise. Inside the container the repository is at `/foss/designs/mult4_2023102006_2023112019`.
 
 Tool check (container, Section 4.2 of the guide):
 
@@ -211,7 +211,7 @@ bash ../report_src/tools/decomp.sh
 Rebuild the report (host, TeX Live with `float`, `subcaption`, `booktabs`, `enumitem`, `lmodern`):
 
 ```bash
-cd ../report_src && pdflatex report.tex && pdflatex report.tex && cp report.pdf ../DVD-2023102006-2023112019/report/report.pdf
+cd ../report_src && pdflatex report.tex && pdflatex report.tex && cp report.pdf ../mult4_2023102006_2023112019/report/report.pdf
 ```
 
-The layout screenshots (report Figure 3) were taken in KLayout from `pnr/mult_array.gds` with the command in Part D. A headless re-render of the submitted GDS with the same layer properties covers 100 % of the full-die screenshot's drawn pixels (99.1 % for run 1's GDS), so the screenshot matches the submitted layout.
+The layout screenshots (report Figure 5) were taken in KLayout from `pnr/mult_array.gds` with the command in Part D. A headless re-render of the submitted GDS with the same layer properties covers 100 % of the full-die screenshot's drawn pixels (99.1 % for run 1's GDS), so the screenshot matches the submitted layout.
