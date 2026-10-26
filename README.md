@@ -200,6 +200,8 @@ bash ../report_src/tools/waveshots.sh /tmp/waveshots
 cp /tmp/waveshots/waveform_11x7.png /tmp/waveshots/waveform_14x7.png ../report_src/figures/
 ```
 
+The charts in report Figures 3 and 4 (cell area by type, critical-path arrival times, setup slack of the eight runs, and the post-route T_min breakdown) are drawn with pgfplots directly in `report.tex`; their data points are typed in from `synth/mult_array_stat.rpt`, `sta/mult_array_timing.rpt`, each run's `final/metrics.json` and Table 7.
+
 Pre-route to post-route timing decomposition (report Table 7; uses the local `pnr/runs/` folder):
 
 ```bash
